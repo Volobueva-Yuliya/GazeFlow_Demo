@@ -9,9 +9,9 @@ setup(
     install_requires=[
     	'tensorflow-gpu==2.4.0',
         'tensorflow-probability==0.12.2',
-        'numpy>=1.18.4',
-        'opencv-python>=4.2.0.34',
-        'pillow>=7.1.2',
+        'numpy',
+        'opencv-python',
+        'pillow',
         'tqdm',
     ],
     include_package_data=True,
