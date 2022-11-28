@@ -1,7 +1,7 @@
 import tensorflow as tf
-from flows.utils.conv import Conv2D
-from flows.utils.conv_zeros import Conv2DZeros
-from layers.spadebn import SpadeBN
+from dcgazeflow_demo.flows.utils.conv import Conv2D
+from dcgazeflow_demo.flows.utils.conv_zeros import Conv2DZeros
+from dcgazeflow_demo.layers.spadebn import SpadeBN
 from tensorflow.keras import layers
 
 Layer = layers.Layer

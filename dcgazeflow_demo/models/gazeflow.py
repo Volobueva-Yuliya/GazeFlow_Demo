@@ -1,14 +1,14 @@
 from typing import Dict
 
 import tensorflow as tf
-from flows import Actnorm, AffineCouplingMask, FlowModule, Inv1x1Conv
-from flows.cond_affine_coupling import ConditionalAffineCoupling
-from flows.factor_out import FactorOut, FactorOutBase
-from flows.quantize import LogitifyImage
-from flows.squeeze import Squeeze
+from dcgazeflow_demo.flows import Actnorm, AffineCouplingMask, FlowModule, Inv1x1Conv
+from dcgazeflow_demo.flows.cond_affine_coupling import ConditionalAffineCoupling
+from dcgazeflow_demo.flows.factor_out import FactorOut, FactorOutBase
+from dcgazeflow_demo.flows.quantize import LogitifyImage
+from dcgazeflow_demo.flows.squeeze import Squeeze
 
 from tensorflow.keras import Model
-from models.resnet import ConnectedResNet, ShallowConnectedResNet
+from dcgazeflow_demo.models.resnet import ConnectedResNet, ShallowConnectedResNet
 
 class Glow(Model):
     def __init__(self, K, L, conditional=True, width=512, connect_type="whole", activation="softplus", condition_shape=(5,)):
