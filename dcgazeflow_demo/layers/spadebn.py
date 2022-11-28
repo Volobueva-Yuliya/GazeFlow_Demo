@@ -2,7 +2,7 @@
 
 import tensorflow as tf
 
-from layers.spectral_normalization import SpectralNormalization
+from dcgazeflow_demo.layers.spectral_normalization import SpectralNormalization
 
 
 class SpadeBN(tf.keras.layers.Layer):

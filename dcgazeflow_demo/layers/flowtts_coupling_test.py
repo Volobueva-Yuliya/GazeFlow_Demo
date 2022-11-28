@@ -3,7 +3,7 @@
 import numpy as np
 import tensorflow as tf
 
-from layers.flowtts_coupling import GTU, CouplingBlock
+from dcgazeflow_demo.layers.flowtts_coupling import GTU, CouplingBlock
 
 
 class GTUTest(tf.test.TestCase):
