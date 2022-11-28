@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 import tensorflow as tf
 import tensorflow_probability as tfp
-from models.gazeflow import Glow
+from dcgazeflow_demo.models.gazeflow import Glow
 
 
 class GazeFlow:
