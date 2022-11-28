@@ -5,8 +5,8 @@ from typing import Callable, Dict
 import tensorflow as tf
 from tensorflow.keras import layers
 
-from flows.affine_coupling import AffineCouplingMask
-from flows.flowbase import FlowComponent
+from dcgazeflow_demo.flows.affine_coupling import AffineCouplingMask
+from dcgazeflow_demo.flows.flowbase import FlowComponent
 
 Layer = layers.Layer
 Conv2D = layers.Conv2D

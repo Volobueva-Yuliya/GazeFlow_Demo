@@ -3,14 +3,14 @@ from typing import Dict
 import tensorflow as tf
 from tensorflow.keras import Model
 
-from flows.actnorm import Actnorm
-from flows.affine_coupling import AffineCoupling
-from flows.factor_out import FactorOut
-from flows.flowbase import FactorOutBase, FlowModule
-from flows.inv1x1conv import Inv1x1Conv
-from flows.quantize import LogitifyImage
-from flows.squeeze import Squeeze
-from layers.resnet import ShallowResNet
+from dcgazeflow_demo.flows.actnorm import Actnorm
+from dcgazeflow_demo.flows.affine_coupling import AffineCoupling
+from dcgazeflow_demo.flows.factor_out import FactorOut
+from dcgazeflow_demo.flows.flowbase import FactorOutBase, FlowModule
+from dcgazeflow_demo.flows.inv1x1conv import Inv1x1Conv
+from dcgazeflow_demo.flows.quantize import LogitifyImage
+from dcgazeflow_demo.flows.squeeze import Squeeze
+from dcgazeflow_demo.layers.resnet import ShallowResNet
 
 
 class SingleFlow(Model):

@@ -3,7 +3,7 @@
 import numpy as np
 import tensorflow as tf
 
-from flows.quantize import LogitifyImage
+from dcgazeflow_demo.flows.quantize import LogitifyImage
 
 
 class LogitifyImageTest(tf.test.TestCase):

@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from flows.inv1x1conv import Inv1x1Conv, Inv1x1Conv2DWithMask
+from dcgazeflow_demo.flows.inv1x1conv import Inv1x1Conv, Inv1x1Conv2DWithMask
 
 
 class Inv1x1ConvTest(tf.test.TestCase):

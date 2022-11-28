@@ -1,8 +1,8 @@
-from flows.utils.conv import Conv2D
-from flows.utils.conv_zeros import Conv2DZeros, Conv1DZeros
-from flows.utils.actnorm_activation import ActnormActivation
-from flows.utils.gaussianize import gaussian_likelihood, gaussian_sample
-from flows.utils.util import bits_x, split_feature
+from dcgazeflow_demo.flows.utils.conv import Conv2D
+from dcgazeflow_demo.flows.utils.conv_zeros import Conv2DZeros, Conv1DZeros
+from dcgazeflow_demo.flows.utils.actnorm_activation import ActnormActivation
+from dcgazeflow_demo.flows.utils.gaussianize import gaussian_likelihood, gaussian_sample
+from dcgazeflow_demo.flows.utils.util import bits_x, split_feature
 
 
 __all__ = [

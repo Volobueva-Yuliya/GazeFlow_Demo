@@ -2,8 +2,8 @@
 import numpy as np
 import tensorflow as tf
 
-from flows.cond_affine_coupling import ConditionalAffineCoupling
-from layers.resnet import ShallowResNet
+from dcgazeflow_demo.flows.cond_affine_coupling import ConditionalAffineCoupling
+from dcgazeflow_demo.layers.resnet import ShallowResNet
 
 
 class ConditionalAffineCouplingTest(tf.test.TestCase):

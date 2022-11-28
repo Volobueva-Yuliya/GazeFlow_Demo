@@ -1,9 +1,9 @@
 import tensorflow as tf
 
-from flows.flowbase import FactorOutBase
-from flows.utils import gaussianize
-from flows.utils.conv_zeros import Conv1DZeros, Conv2DZeros
-from flows.utils.util import split_feature
+from dcgazeflow_demo.flows.flowbase import FactorOutBase
+from dcgazeflow_demo.flows.utils import gaussianize
+from dcgazeflow_demo.flows.utils.conv_zeros import Conv1DZeros, Conv2DZeros
+from dcgazeflow_demo.flows.utils.util import split_feature
 
 
 class FactorOut(FactorOutBase):

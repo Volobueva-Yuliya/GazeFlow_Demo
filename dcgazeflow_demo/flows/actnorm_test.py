@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from flows.actnorm import Actnorm
+from dcgazeflow_demo.flows.actnorm import Actnorm
 
 
 class ActnormTest(tf.test.TestCase):

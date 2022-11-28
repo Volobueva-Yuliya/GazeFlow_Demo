@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from flows.flowbase import FlowComponent
+from dcgazeflow_demo.flows.flowbase import FlowComponent
 
 
 class Actnorm(FlowComponent):

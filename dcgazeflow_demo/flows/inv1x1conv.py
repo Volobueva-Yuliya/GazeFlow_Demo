@@ -3,7 +3,7 @@ from typing import Tuple
 import numpy as np
 import tensorflow as tf
 
-from flows.flowbase import FlowComponent
+from dcgazeflow_demo.flows.flowbase import FlowComponent
 
 
 def regular_matrix_init(shape: Tuple[int, int], dtype=None):

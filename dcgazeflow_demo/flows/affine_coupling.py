@@ -4,7 +4,7 @@ from typing import Callable
 import tensorflow as tf
 from tensorflow.keras import layers
 
-from flows.flowbase import FlowComponent
+from dcgazeflow_demo.flows.flowbase import FlowComponent
 
 Layer = layers.Layer
 Conv2D = layers.Conv2D

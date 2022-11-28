@@ -2,7 +2,7 @@
 
 import tensorflow as tf
 
-from flows.squeeze import Squeeze, Squeeze2DWithMask
+from dcgazeflow_demo.flows.squeeze import Squeeze, Squeeze2DWithMask
 
 
 class Squeeze2DTest(tf.test.TestCase):

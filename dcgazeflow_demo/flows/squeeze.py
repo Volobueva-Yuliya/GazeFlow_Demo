@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from flows.flowbase import FlowBase
+from dcgazeflow_demo.flows.flowbase import FlowBase
 
 
 class Squeeze(FlowBase):
