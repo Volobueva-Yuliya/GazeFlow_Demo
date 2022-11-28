@@ -3,7 +3,7 @@ from typing import Tuple
 import tensorflow as tf
 from tensorflow.keras import layers
 
-from flows.utils.actnorm_activation import ActnormActivation
+from dcgazeflow_demo.flows.utils.actnorm_activation import ActnormActivation
 
 Layer = layers.Layer
 

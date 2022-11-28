@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from flows.utils.conv_zeros import Conv2DZeros
+from dcgazeflow_demo.flows.utils.conv_zeros import Conv2DZeros
 
 
 class Conv2DTest(tf.test.TestCase):
