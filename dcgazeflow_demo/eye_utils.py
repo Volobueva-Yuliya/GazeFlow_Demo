@@ -91,11 +91,11 @@ def get_eye_resized(image, landmarks, border=0.4, input_size=(64, 32)):
     return (cv2.resize(eyes[0][0], input_size), cv2.resize(eyes[1][0], input_size)), (eyes[0][1], eyes[1][1])
 
 
-def new_eyes(model, image, landmarks, gaze_pitch, gaze_yaw, pose_pitch, pose_yaw, delta, border=0.4):
+def new_eyes(model, image, landmarks, gaze_pitch, gaze_yaw, pose_pitch, pose_yaw, delta_left, delta_right, border=0.4):
     
     # передаю подсчитанные conditions
-    init_cond_lelt = np.asarray([[gaze_pitch, gaze_yaw, pose_pitch, pose_yaw, 0.]])/ 255.
-    init_cond_right = np.asarray([[gaze_pitch, gaze_yaw, pose_pitch, pose_yaw, 1.]])/255.
+    init_cond_lelt = np.asarray([[gaze_pitch, gaze_yaw, pose_pitch, pose_yaw, 0.]])
+    init_cond_right = np.asarray([[gaze_pitch, gaze_yaw, pose_pitch, pose_yaw, 1.]])
     
     eyes = get_eye_resized(image, landmarks, border)
     
@@ -105,9 +105,11 @@ def new_eyes(model, image, landmarks, gaze_pitch, gaze_yaw, pose_pitch, pose_yaw
     encoded_left_eye, zaux_left = encode(model, init_cond_lelt, (eye_left[None] / 255.).astype(np.float32))
     encoded_right_eye, zaux_right = encode(model, init_cond_right, (eye_right[None] / 255.).astype(np.float32))
     
-    delta = tf.convert_to_tensor(np.array([delta]).astype(np.float32))
-    new_eye_left = np.array(decode(model, init_cond_lelt + delta, encoded_left_eye, zaux_left))
-    new_eye_right = np.array(decode(model, init_cond_right + delta, encoded_right_eye, zaux_right))
+    delta_left = tf.convert_to_tensor(np.array([delta_left]).astype(np.float32))
+    delta_right = tf.convert_to_tensor(np.array([delta_right]).astype(np.float32))
+
+    new_eye_left = np.array(decode(model, init_cond_lelt + delta_left, encoded_left_eye, zaux_left))
+    new_eye_right = np.array(decode(model, init_cond_right + delta_right, encoded_right_eye, zaux_right))
     
     eye_image = np.zeros_like(image).astype(np.float32)
     eye_mask = np.zeros_like(image)
